@@ -3,7 +3,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="section-heading">
-                            <h2 class="text-center">Featured Cars</h2>
+                            <h2 class="text-center">Featured Cars here</h2>
                             <a href="\allCarsPage">view more <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
