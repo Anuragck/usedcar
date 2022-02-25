@@ -16,13 +16,13 @@
                 <div class="banner-item-02">
                     <div class="text-content">
                         <h4></h4>
-                        <h2></h2>
+                        <h2>Let Us Find What You’re Looking For</h2>
                     </div>
                 </div>
                 <div class="banner-item-03">
                     <div class="text-content">
                         <h4></h4>
-                        <h2></h2>
+                        <h2>Eye it – try it – buy it!</h2>
                     </div>
                 </div>
             </div>
@@ -69,6 +69,64 @@
             </div> --}}
         </div>
     </div>
+    
+
+    <div class="container">
+    <div class="row">
+    <div class="col-md-12">
+            <div class="section-heading">
+            <br><br>  <br><br>  <br><br>
+              <h2>WHY DREAM CARS..?   </h2>
+            </div>
+          </div>        
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-xl-3">
+            <div class="card bg-c-blue order-card">
+                <div class="card-block">
+                    <h6 class="m-b-20"></h6>
+                    <h2 class="text-right"><i class="fa fa-car f-left"></i><span></span></h2>
+                    <p class="m-b-0"><span class="f-right">Best Price For Your Car</span></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 col-xl-3">
+            <div class="card bg-c-green order-card">
+                <div class="card-block">
+                    <h6 class="m-b-20"></h6>
+                    <h2 class="text-right"><i class="fa fa-bolt f-left"></i><span></span></h2>
+                    <p class="m-b-0"><span class="f-right">Instant Payment</span></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 col-xl-3">
+            <div class="card bg-c-yellow order-card">
+                <div class="card-block">
+                    <h6 class="m-b-20"></h6>
+                    <h2 class="text-right"><i class="fa fa-thumbs-up f-left"></i><span></span></h2>
+                    <p class="m-b-0"><span class="f-right">100% Genuine Customers</span></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 col-xl-3">
+            <div class="card bg-c-pink order-card">
+                <div class="card-block">
+                    <h6 class="m-b-20"></h6>
+                    <h2 class="text-right"><i class="fa fa-exchange f-left"></i><span></span></h2>
+                    <p class="m-b-0"><span class="f-right">Free RC Transfer</span></p>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+
+
 
 
     <div class="best-features">
@@ -76,7 +134,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-heading">
-                        <center>
+                        <center>  <br><br>  <br><br>  <br><br>
                             <h2><b>POPULAR BRANDS</h2></b>
                             Most Reliable Pre-Owned Cars
                         </center>
@@ -101,7 +159,82 @@
     </div>
 
 
+    <div class="happy-clients">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-">
+            <div class="section-heading">
+              <h2>Happy Clients</h2>
 
+              <a href=""> <i class=""></i></a>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="owl-clients owl-carousel text-center">
+              <div class="service-item">
+                <div class="icon">
+                  <i class="fa fa-user"></i>
+                </div>
+                <div class="down-content">
+                  <h4>John Doe</h4>
+                  <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."</em></p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <div class="icon">
+                  <i class="fa fa-user"></i>
+                </div>
+                <div class="down-content">
+                  <h4>Jane Smith</h4>
+                  <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."</em></p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <div class="icon">
+                  <i class="fa fa-user"></i>
+                </div>
+                <div class="down-content">
+                  <h4>Antony Davis</h4>
+                  <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."</em></p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <div class="icon">
+                  <i class="fa fa-user"></i>
+                </div>
+                <div class="down-content">
+                  <h4>John Doe</h4>
+                  <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."</em></p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <div class="icon">
+                  <i class="fa fa-user"></i>
+                </div>
+                <div class="down-content">
+                  <h4>Jane Smith</h4>
+                  <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."</em></p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <div class="icon">
+                  <i class="fa fa-user"></i>
+                </div>
+                <div class="down-content">
+                  <h4>Antony Davis</h4>
+                  <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."</em></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>      
 
 
     </div>
