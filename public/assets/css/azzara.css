@@ -7805,3 +7805,8 @@ div.table-responsive > div.dataTables_wrapper > div.row {
 
 /************PRELOADER-END****************************/
 
+/*required-form-field*/
+.required:after {
+    content:" *";
+    color: red;
+  }

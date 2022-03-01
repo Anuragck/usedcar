@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col">
         <div class="form-group">
-          <label for="" class="font-weight-bold text-muted"
+          <label for="" class="font-weight-bold text-muted required"
             >Select Brand Name</label
           >
           <model-list-select
@@ -15,17 +15,21 @@
             option-value="id"
             :custom-text="brand"
             placeholder="select item"
- :isDisabled="report_view"
-
-
+            :isDisabled="report_view"
           >
           </model-list-select>
+<small
+                                    class="text-danger"
+                                    v-if="errors.brand_id"
+                                >
+                                    {{ 'This feild is required' }}</small
+                                >
         </div>
       </div>
 
       <div class="col">
         <div class="form-group">
-          <label for="" class="font-weight-bold text-muted"
+          <label for="" class="font-weight-bold text-muted required"
             >Select Model Name</label
           >
           <model-list-select
@@ -38,11 +42,17 @@
             :isDisabled="enableModel || report_view"
           >
           </model-list-select>
+<small
+                                    class="text-danger"
+                                    v-if="errors.brand_id"
+                                >
+                                    {{ 'This field is required' }}</small
+                                >
         </div>
       </div>
       <div class="col">
         <div class="form-group">
-          <label for="" class="font-weight-bold text-muted">Color</label>
+          <label for="" class="font-weight-bold text-muted required">Color</label>
           <input
             type="text"
             class="form-control"
@@ -50,12 +60,18 @@
             v-model="purchaseData.color"
             :disabled="report_view"
           />
+<small
+                                    class="text-danger"
+                                    v-if="errors.color"
+                                >
+                                    {{ errors.color[0] }}</small
+                                >
         </div>
       </div>
 
       <div class="col">
         <div class="form-group">
-          <label for="" class="font-weight-bold text-muted"
+          <label for="" class="font-weight-bold text-muted required"
             >Year of Regestration</label
           >
           <input
@@ -65,38 +81,49 @@
             name="year_of_reg"
             placeholder="Enter year of registration"
             v-model="purchaseData.year_of_reg"
- :disabled="report_view"
+            :disabled="report_view"
           />
+<small
+                                    class="text-danger"
+                                    v-if="errors.year_of_reg"
+                                >
+                                    {{ errors.year_of_reg[0] }}</small
+                                >
         </div>
       </div>
     </div>
     <!--1st row end-->
     <div class="row">
       <div class="col">
-
         <div class="form-group">
-          <label for="" class="font-weight-bold text-muted">Reg Number</label>
+          <label for="" class="font-weight-bold text-muted required">Reg Number</label>
           <input
             type="text"
             class="form-control"
             placeholder="Enter Reg Number"
             v-model="register_number"
-           style="text-transform:uppercase"
- :disabled="report_view"
+            style="text-transform: uppercase"
+            :disabled="report_view"
           />
+<small
+                                    class="text-danger"
+                                    v-if="errors.reg_no"
+                                >
+                                    {{ errors.reg_no[0] }}</small
+                                >
         </div>
       </div>
 
       <div class="col">
         <div class="form-group">
-          <label for="" class="font-weight-bold text-muted"
+          <label for="" class="font-weight-bold text-muted required"
             >Select Fuel Type</label
           >
           <select
             class="form-control"
             required=""
             v-model="purchaseData.fuel_type"
- :disabled="report_view"
+            :disabled="report_view"
           >
             <option value="">select fuel type</option>
             <option value="PETROL">Petrol</option>
@@ -105,12 +132,19 @@
             <option value="CNG">CNG</option>
             <option value="OTHERS">Others</option>
           </select>
+<small
+                                    class="text-danger"
+                                    v-if="errors.fuel_type"
+                                >
+                                    {{ errors.fuel_type[0] }}</small
+                                >
+
         </div>
       </div>
 
       <div class="col">
         <div class="form-group">
-          <label for="" class="font-weight-bold text-muted"
+          <label for="" class="font-weight-bold text-muted required"
             >Enter Kms Driven</label
           >
           <input
@@ -118,8 +152,14 @@
             class="form-control"
             placeholder="Enter Kms Driven"
             v-model="purchaseData.kms_driven"
- :disabled="report_view"
+            :disabled="report_view"
           />
+<small
+                                    class="text-danger"
+                                    v-if="errors.kms_driven"
+                                >
+                                    {{ errors.kms_driven[0] }}</small
+                                >
         </div>
       </div>
 
@@ -132,7 +172,7 @@
             class="form-control"
             required=""
             v-model="purchaseData.no_of_owners"
- :disabled="report_view"
+            :disabled="report_view"
           >
             <option value="">select no.of owners</option>
             <option>1</option>
@@ -146,7 +186,7 @@
     <div class="row">
       <div class="col">
         <div class="form-group">
-          <label for="" class="font-weight-bold text-muted"
+          <label for="" class="font-weight-bold text-muted required"
             >Engine Displacement (cc)
           </label>
           <input
@@ -154,8 +194,14 @@
             class="form-control"
             placeholder="Enter engine displacement"
             v-model="purchaseData.cc"
- :disabled="report_view"
+            :disabled="report_view"
           />
+<small
+                                    class="text-danger"
+                                    v-if="errors.cc"
+                                >
+                                    {{ errors.cc[0] }}</small
+                                >
         </div>
       </div>
       <div class="col">
@@ -166,7 +212,7 @@
             class="form-control"
             placeholder="Enter RTO"
             v-model="purchaseData.rto"
- :disabled="report_view"
+            :disabled="report_view"
           />
         </div>
       </div>
@@ -180,7 +226,7 @@
             class="form-control"
             required=""
             v-model="purchaseData.transmission_type"
- :disabled="report_view"
+            :disabled="report_view"
           >
             <option value="">select trasnsmission type</option>
             <option>Automatic</option>
@@ -196,7 +242,7 @@
             class="form-control"
             required=""
             v-model="purchaseData.gear_box"
- :disabled="report_view"
+            :disabled="report_view"
           >
             <option value="">select gear box</option>
             <option>2 speed</option>
@@ -223,7 +269,7 @@
             class="form-control"
             placeholder="Enter Milage"
             v-model="purchaseData.milage"
- :disabled="report_view"
+            :disabled="report_view"
           />
         </div>
       </div>
@@ -236,7 +282,7 @@
             placeholder="Enter No.Of Seats"
             class="form-control"
             v-model="purchaseData.no_of_seats"
- :disabled="report_view"
+            :disabled="report_view"
           />
         </div>
       </div>
@@ -248,7 +294,7 @@
             class="form-control"
             required=""
             v-model="purchaseData.drive_type"
- :disabled="report_view"
+            :disabled="report_view"
           >
             <option value="">select drive type</option>
             <option value="FWD">FWD</option>
@@ -263,7 +309,7 @@
             class="form-control"
             required=""
             v-model="purchaseData.front_brake"
- :disabled="report_view"
+            :disabled="report_view"
           >
             <option value="">select front brake</option>
             <option value="DISC">Disc</option>
@@ -281,7 +327,7 @@
             class="form-control"
             required=""
             v-model="purchaseData.back_brake"
- :disabled="report_view"
+            :disabled="report_view"
           >
             <option value="">select back brake</option>
             <option value="DISC">Disc</option>
@@ -297,7 +343,7 @@
             class="form-control"
             required=""
             v-model="purchaseData.body_type"
- :disabled="report_view"
+            :disabled="report_view"
           >
             <option value="">select body type</option>
             <option value="SEDAN">Sedan</option>
@@ -309,7 +355,7 @@
 
       <div class="col-6">
         <div class="form-group">
-          <label for="" class="font-weight-bold text-muted"
+          <label for="" class="font-weight-bold text-muted required"
             >Purchased Price</label
           >
           <input
@@ -317,8 +363,14 @@
             class="form-control"
             placeholder="purchased price"
             v-model="purchaseData.purchased_price"
- :disabled="report_view"
+            :disabled="report_view"
           />
+<small
+                                    class="text-danger"
+                                    v-if="errors.purchased_price"
+                                >
+                                    {{ errors.purchased_price[0] }}</small
+                                >
         </div>
       </div>
     </div>
@@ -337,7 +389,7 @@
               value="Yes"
               class="custom-control-input"
               v-model="purchaseData.power_steering"
- :disabled="report_view"
+              :disabled="report_view"
             />
             <label class="custom-control-label" for="customRadioInline1"
               >Yes</label
@@ -351,7 +403,7 @@
               value="No"
               class="custom-control-input"
               v-model="purchaseData.power_steering"
- :disabled="report_view"
+              :disabled="report_view"
             />
             <label class="custom-control-label" for="customRadioInline2"
               >No</label
@@ -373,7 +425,7 @@
               name="b"
               value="Yes"
               v-model="purchaseData.abs"
- :disabled="report_view"
+              :disabled="report_view"
               class="custom-control-input"
             />
             <label class="custom-control-label" for="customRadioInline3"
@@ -387,7 +439,7 @@
               name="b"
               value="No"
               v-model="purchaseData.abs"
- :disabled="report_view"
+              :disabled="report_view"
               class="custom-control-input"
             />
             <label class="custom-control-label" for="customRadioInline4"
@@ -409,7 +461,7 @@
               name="c"
               value="Yes"
               v-model="purchaseData.driver_air_bag"
- :disabled="report_view"
+              :disabled="report_view"
               class="custom-control-input"
             />
             <label class="custom-control-label" for="customRadioInline5"
@@ -423,7 +475,7 @@
               name="c"
               value="No"
               v-model="purchaseData.driver_air_bag"
- :disabled="report_view"
+              :disabled="report_view"
               class="custom-control-input"
             />
             <label class="custom-control-label" for="customRadioInline6"
@@ -444,7 +496,7 @@
               id="customRadioInline7"
               name="d"
               value="Yes"
- :disabled="report_view"
+              :disabled="report_view"
               v-model="purchaseData.passenger_air_bag"
               class="custom-control-input"
             />
@@ -459,7 +511,7 @@
               name="d"
               value="No"
               v-model="purchaseData.passenger_air_bag"
- :disabled="report_view"
+              :disabled="report_view"
               class="custom-control-input"
             />
             <label class="custom-control-label" for="customRadioInline8"
@@ -484,7 +536,7 @@
               name="e"
               value="Yes"
               v-model="purchaseData.auto_climate"
- :disabled="report_view"
+              :disabled="report_view"
               class="custom-control-input"
             />
             <label class="custom-control-label" for="customRadioInline9"
@@ -499,7 +551,7 @@
               class="custom-control-input"
               value="No"
               v-model="purchaseData.auto_climate"
- :disabled="report_view"
+              :disabled="report_view"
             />
             <label class="custom-control-label" for="customRadioInline10"
               >No</label
@@ -520,7 +572,7 @@
               class="custom-control-input"
               value="Yes"
               v-model="purchaseData.alloy_wheel"
- :disabled="report_view"
+              :disabled="report_view"
             />
             <label class="custom-control-label" for="customRadioInline11"
               >Yes</label
@@ -533,7 +585,7 @@
               name="f"
               value="No"
               v-model="purchaseData.alloy_wheel"
- :disabled="report_view"
+              :disabled="report_view"
               class="custom-control-input"
             />
             <label class="custom-control-label" for="customRadioInline12"
@@ -555,7 +607,7 @@
               name="g"
               value="Yes"
               v-model="purchaseData.ac"
- :disabled="report_view"
+              :disabled="report_view"
               class="custom-control-input"
             />
             <label class="custom-control-label" for="customRadioInline13"
@@ -570,7 +622,7 @@
               class="custom-control-input"
               value="No"
               v-model="purchaseData.ac"
- :disabled="report_view"
+              :disabled="report_view"
             />
             <label class="custom-control-label" for="customRadioInline14"
               >No</label
@@ -586,7 +638,7 @@
       <div class="row">
         <div class="col">
           <div class="form-group">
-            <label for="" class="font-weight-bold text-muted"
+            <label for="" class="font-weight-bold text-muted required"
               >Enter Full Name
             </label>
             <input
@@ -594,14 +646,20 @@
               class="form-control"
               placeholder="Enter Full Name"
               v-model="purchaseData.seller_name"
- :disabled="report_view"
+              :disabled="report_view"
             />
+<small
+                                    class="text-danger"
+                                    v-if="errors.seller_name"
+                                >
+                                    {{ errors.seller_name[0] }}</small
+                                >
           </div>
         </div>
 
         <div class="col">
           <div class="form-group">
-            <label for="" class="font-weight-bold text-muted"
+            <label for="" class="font-weight-bold text-muted required"
               >Enter Phone Number</label
             >
             <input
@@ -609,8 +667,14 @@
               class="form-control"
               placeholder="Enter Phone Number"
               v-model="purchaseData.seller_ph"
- :disabled="report_view"
+              :disabled="report_view"
             />
+<small
+                                    class="text-danger"
+                                    v-if="errors.seller_ph"
+                                >
+                                    {{ errors.seller_ph[0] }}</small
+                                >
           </div>
         </div>
         <div class="col">
@@ -623,7 +687,7 @@
               class="form-control"
               placeholder="Enter email id"
               v-model="purchaseData.seller_email"
- :disabled="report_view"
+              :disabled="report_view"
             />
           </div>
         </div>
@@ -639,8 +703,7 @@
               class="form-control"
               rows="2"
               v-model="purchaseData.seller_address"
-            :disabled="report_view"
-
+              :disabled="report_view"
             >
             </textarea>
           </div>
@@ -654,7 +717,7 @@
       <button
         class="btn btn-primary btn-round float-right mr-2"
         @click="submitPurchase()"
-v-if="report_view == false"
+        v-if="report_view == false"
       >
         Save Changes
       </button>
@@ -668,18 +731,18 @@ export default {
   components: {
     ModelListSelect,
   },
-  props: ["edit",'report_only'],
+  props: ["edit", "report_only"],
   data() {
     return {
-success_title:'Purchase Added Successfully',
+      success_title: "Purchase Added Successfully",
       selectedBrand: "",
       selectedModel: "",
       brands: [],
       modelList: [],
-register_number:"",
+      register_number: "",
       enableModel: true,
 
-report_view:false,
+      report_view: false,
 
       purchaseData: {
         id: "",
@@ -805,11 +868,9 @@ report_view:false,
         _this.purchaseData.seller_email = purchase.email;
         _this.purchaseData.seller_address = purchase.address;
 
-_this.success_title="Purchase Updated Successfully";
+        _this.success_title = "Purchase Updated Successfully";
       });
     }
-
-
 
     bus.$on("clear-form", function () {
       _this.clearFormData();
@@ -824,16 +885,13 @@ _this.success_title="Purchase Updated Successfully";
     //   });
     // });
 
-  if (this.report_only) {
-            var _this = this;
-            _this.report_view = true;
-
-        }
-
+    if (this.report_only) {
+      var _this = this;
+      _this.report_view = true;
+    }
   },
 
   methods: {
-
     getBrands() {
       axios
         .get("get-brands")
@@ -866,7 +924,7 @@ _this.success_title="Purchase Updated Successfully";
         .then((response) => {
           if (response.data == "success") {
             Swal.fire({
-              title: 'Purchase Added Successfully',
+              title: "Purchase Added Successfully",
               icon: "success",
               button: "Ok",
             });
@@ -902,11 +960,11 @@ _this.success_title="Purchase Updated Successfully";
   },
 
   watch: {
-
-
-register_number: function () {
+    register_number: function () {
       if (this.register_number != "") {
-        this.purchaseData.reg_no = this.register_number.replace(/\s/g,'').toUpperCase();
+        this.purchaseData.reg_no = this.register_number
+          .replace(/\s/g, "")
+          .toUpperCase();
       }
     },
     selectedBrand: function () {

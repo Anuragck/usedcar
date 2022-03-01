@@ -17,7 +17,7 @@
           </div>
 
           <div class="text-center mr-5 mt-4">
-            <label for="" class="">Select Item</label>
+            <label for="" class="required">Select Item</label>
           </div>
 
           <div class="input-group mb-3 justify-content-center mt-4">

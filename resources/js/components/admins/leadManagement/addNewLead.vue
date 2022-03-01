@@ -3,13 +3,19 @@
     <div class="row">
       <div class="col">
         <div class="form-group">
-          <label for="" class="font-weight-bold text-muted">Name</label>
+          <label for="" class="font-weight-bold text-muted required">Name</label>
           <input
             v-model="enquiries.name"
             type="text"
             class="form-control"
             placeholder="Enter Name"
           />
+ <small
+                                    class="text-danger"
+                                    v-if="errors.name"
+                                >
+                                    {{ errors.name[0] }}</small
+                                >
         </div>
       </div>
 
@@ -22,6 +28,12 @@
             class="form-control"
             placeholder="Enter Email ID"
           />
+ <small
+                                    class="text-danger"
+                                    v-if="errors.email"
+                                >
+                                    {{ errors.email[0] }}</small
+                                >
         </div>
       </div>
     </div>
@@ -29,7 +41,7 @@
     <div class="row">
       <div class="col">
         <div class="form-group">
-          <label for="" class="font-weight-bold text-muted"
+          <label for="" class="font-weight-bold text-muted required"
             >Enquired Vehicle</label
           >
           <div>
@@ -41,6 +53,12 @@
               placeholder="Search Vehicle Here"
             >
             </multiselect>
+ <small
+                                    class="text-danger"
+                                    v-if="errors.selectedBrand || errors.selectedModel"
+                                >
+                                    {{ 'Please Select Vehicle' }}</small
+                                >
           </div>
         </div>
       </div>
@@ -87,7 +105,7 @@
     <div class="row">
       <div class="col">
         <div class="form-group">
-          <label for="" class="font-weight-bold text-muted"
+          <label for="" class="font-weight-bold text-muted required"
             >Mobile Number</label
           >
           <input
@@ -96,11 +114,17 @@
             class="form-control"
             placeholder="Enter Mobile Number"
           />
+ <small
+                                    class="text-danger"
+                                    v-if="errors.mobile"
+                                >
+                                    {{ errors.mobile[0] }}</small
+                                >
         </div>
       </div>
     </div>
 
-    <div class="row">
+    <div class="row" >
       <div class="col">
         <div class="form-group">
           <label for="" class="font-weight-bold text-muted"
@@ -120,7 +144,7 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row" v-if="enquiries.source_of_lead == 'Reference'">
       <div class="col">
         <div class="form-group">
           <label for="comment" class="font-weight-bold text-muted"
@@ -210,6 +234,7 @@ export default {
     },
 
     clearFormData() {
+this.errors={},
       this.enquiries.selectedBrand = "";
       this.enquiries.selectedModel = "";
 

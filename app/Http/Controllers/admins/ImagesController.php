@@ -141,6 +141,10 @@ class ImagesController extends Controller
 
     public function addImage(Request $request){
 
+        $request->validate([
+            'img_type' => 'required',
+        ]);
+
         $purchase = Purchase::find($request->vehicle_id);
 if ($request->hasFile('image')) {
 

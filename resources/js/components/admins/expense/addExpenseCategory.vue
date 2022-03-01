@@ -23,9 +23,15 @@
           name="expenscategory_name"
           v-model="expensecategoryData.expensecategory_name"
         />
-        <label for="inputFloatingLabel" class="placeholder"
+        <label for="inputFloatingLabel" class="placeholder required"
           >Enter Expense Category Name</label
         >
+<small
+                                    class="text-danger"
+                                    v-if="errors.expensecategory_name"
+                                >
+                                    {{ errors.expensecategory_name[0] }}</small
+                                >
       </div>
     </div>
 

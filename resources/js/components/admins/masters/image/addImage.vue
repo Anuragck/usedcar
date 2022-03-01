@@ -19,7 +19,7 @@
       <div class="form-group mx-2">
         <div class="row">
           <div class="col-2">
-            <label for="type">Type : </label>
+            <label for="type" class="required">Type : </label>
           </div>
           <div class="col-10">
             <select id="type" class="form-control" v-model="upload.img_type">
@@ -27,6 +27,12 @@
               <option value="1">Front View</option>
               <option value="2">Other</option>
             </select>
+<small
+                                    class="text-danger"
+                                    v-if="errors.img_type"
+                                >
+                                    {{ errors.img_type[0] }}</small
+                                >
           </div>
         </div>
       </div>
@@ -164,6 +170,7 @@ this.clearFormData();
         this.upload.image= "";
         this.upload.img_type= "";
  this.url= "../assets/img/nofilechoosen.png";
+this.errors={};
     }
   },
 

@@ -12,7 +12,7 @@
       </div>
 
       <div class="row">
-        <div class="col-xl-4 col-sm-6 col-12">
+        <div class="col-xl-4 col-sm-6 col-12" v-if="purchase_price != null">
           <div class="card">
             <div class="card-content">
               <div class="card-body">
@@ -29,7 +29,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-4 col-sm-6 col-12">
+        <div class="col-xl-4 col-sm-6 col-12" v-if="total_expense != null">
           <div class="card">
             <div class="card-content">
               <div class="card-body">
@@ -46,7 +46,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-4 col-sm-6 col-12">
+        <div class="col-xl-4 col-sm-6 col-12"  v-if="total_price != null" >
           <div class="card">
             <div class="card-content">
               <div class="card-body">

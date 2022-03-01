@@ -16,7 +16,7 @@
         <div class="row">
           <div class="col">
             <div class="form-group">
-              <label for="" class="font-weight-bold text-muted"
+              <label for="" class="font-weight-bold text-muted required"
                 >Select Conversion Status</label
               >
               <select
@@ -28,6 +28,12 @@
                 <option value="1">Booked</option>
                 <option value="2">Dropped</option>
               </select>
+<small
+                                    class="text-danger"
+                                    v-if="errors.convertion_status"
+                                >
+                                    {{ errors.convertion_status[0] }}</small
+                                >
             </div>
           </div>
         </div>
@@ -130,12 +136,13 @@
                   class="form-control"
                   placeholder="Total Vehicle Price"
                   v-model="convertion.total_vehicle_price"
+readonly
                 />
               </div>
             </div>
             <div class="col-lg-6">
               <div class="form-group">
-                <label for="" class="font-weight-bold text-muted"
+                <label for="" class="font-weight-bold text-muted required"
                   >Booking Amount</label
                 >
                 <input
@@ -144,6 +151,12 @@
                   placeholder="Booking Amount"
                   v-model="convertion.booking_amount"
                 />
+<small
+                                    class="text-danger"
+                                    v-if="errors.booking_amount"
+                                >
+                                    {{ errors.booking_amount[0] }}</small
+                                >
               </div>
             </div>
           </div>
@@ -161,6 +174,12 @@
                 v-model="convertion.remarks"
               >
               </textarea>
+<small
+                                    class="text-danger"
+                                    v-if="errors.remarks"
+                                >
+                                    {{ errors.remarks[0] }}</small
+                                >
             </div>
           </div>
         </div>
@@ -272,6 +291,7 @@ export default {
       this.convertion.total_vehicle_price = "";
       this.convertion.booking_amount = "";
       this.convertion.remarks = "";
+this.errors={};
     },
   },
 

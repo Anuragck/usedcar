@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class VehicleListController extends Controller
 {
     public function vehilceList(){
-        $vehiclelist =Purchase::with('brands','models')->where('vehicle_status','=',0)->orderBy('id','DESC')->get();
+        $vehiclelist =Purchase::with('brands','models','images')->where('vehicle_status','=',0)->orderBy('id','DESC')->get();
         return $vehiclelist;
 }
 

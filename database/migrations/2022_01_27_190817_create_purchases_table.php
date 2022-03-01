@@ -18,13 +18,13 @@ class CreatePurchasesTable extends Migration
             $table->bigInteger('user_id')->unsigned();
             $table->bigInteger('brand_id')->unsigned();
             $table->bigInteger('model_id')->unsigned();
-            $table->string('color',20);
-            $table->string('year_of_reg',4);
-            $table->string('reg_no',20);
-            $table->string('fuel',20);
+            $table->string('color',20)->nullable();
+            $table->string('year_of_reg',4)->nullable();
+            $table->string('reg_no',20)->nullable();
+            $table->string('fuel',20)->nullable();
             $table->string('kms_driven',255)->nullable();
-            $table->string('no_of_owners',4);
-            $table->string('cc',20);
+            $table->string('no_of_owners',4)->nullable();
+            $table->string('cc',20)->nullable();
             $table->string('rto',50)->nullable();
             $table->string('transmission_type',20)->nullable();
             $table->string('gear_box',20)->nullable();
@@ -54,8 +54,8 @@ class CreatePurchasesTable extends Migration
 
             $table->string('seller_name',50);
             $table->string('phone',20);
-            $table->string('email',50);
-            $table->text('address',50);
+            $table->string('email',50)->nullable();
+            $table->text('address',50)->nullable();
 
             $table->string('address_proof',255)->nullable();
             $table->string('reg_certificate',255)->nullable();

@@ -30,7 +30,7 @@
         <!-- Banner Ends Here -->
 
         <div class="latest-products">
-<index-page-cars></index-page-cars>
+            <index-page-cars></index-page-cars>
             {{-- <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -68,174 +68,201 @@
                 </div>
             </div> --}}
         </div>
+
     </div>
-    
 
-    <div class="container">
-    <div class="row">
-    <div class="col-md-12">
-            <div class="section-heading">
-            <br><br>  <br><br>  <br><br>
-              <h2>WHY DREAM CARS..?   </h2>
-            </div>
-          </div>        
-
-
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<div class="container">
-    <div class="row">
-        <div class="col-md-4 col-xl-3">
-            <div class="card bg-c-blue order-card">
-                <div class="card-block">
-                    <h6 class="m-b-20"></h6>
-                    <h2 class="text-right"><i class="fa fa-car f-left"></i><span></span></h2>
-                    <p class="m-b-0"><span class="f-right">Best Price For Your Car</span></p>
+    <div class="container mb-5 pb-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading mt-5 pt-5 text-center">
+                    <h2><b>Why Dream Cars</h2></b>
                 </div>
             </div>
         </div>
-        
-        <div class="col-md-4 col-xl-3">
-            <div class="card bg-c-green order-card">
-                <div class="card-block">
-                    <h6 class="m-b-20"></h6>
-                    <h2 class="text-right"><i class="fa fa-bolt f-left"></i><span></span></h2>
-                    <p class="m-b-0"><span class="f-right">Instant Payment</span></p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-md-4 col-xl-3">
-            <div class="card bg-c-yellow order-card">
-                <div class="card-block">
-                    <h6 class="m-b-20"></h6>
-                    <h2 class="text-right"><i class="fa fa-thumbs-up f-left"></i><span></span></h2>
-                    <p class="m-b-0"><span class="f-right">100% Genuine Customers</span></p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-md-4 col-xl-3">
-            <div class="card bg-c-pink order-card">
-                <div class="card-block">
-                    <h6 class="m-b-20"></h6>
-                    <h2 class="text-right"><i class="fa fa-exchange f-left"></i><span></span></h2>
-                    <p class="m-b-0"><span class="f-right">Free RC Transfer</span></p>
-                </div>
-            </div>
-        </div>
-	</div>
-</div>
+    </div>
 
-
-
-
-    <div class="best-features">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-heading">
-                        <center>  <br><br>  <br><br>  <br><br>
-                            <h2><b>POPULAR BRANDS</h2></b>
-                            Most Reliable Pre-Owned Cars
-                        </center>
+            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-xl-3">
+                        <div class="card bg-c-blue order-card">
+                            <div class="card-block">
+                                <h6 class="m-b-20"></h6>
+                                <h2 class="text-right"><i class="fa fa-car f-left"></i><span></span></h2>
+                                <p class="m-b-0"><span class="f-right">Best Price For Your Car</span></p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="row d-flex justify-content-center">
-                        <div class="brand-carousel section-padding owl-carousel">
-                            <div class="single-logo"><img alt="" src="assets\img\logo1.png"></div>
-                            <div class="single-logo"><img alt="" src="assets\img\logo2.png"></div>
-                            <div class="single-logo"><img alt="" src="assets\img\logo3.png"></div>
-                            <div class="single-logo"><img alt="" src="assets\img\logo4.png"></div>
-                            <div class="single-logo"><img alt="" src="assets\img\logo5.png"></div>
-                            <div class="single-logo"><img alt="" src="assets\img\logo8.png"></div>
-                            <div class="single-logo"><img alt="" src="assets\img\logo7.png"></div>
-                            <div class="single-logo"><img alt="" src="assets\img\logo9.png"></div>
+
+                    <div class="col-md-4 col-xl-3">
+                        <div class="card bg-c-green order-card">
+                            <div class="card-block">
+                                <h6 class="m-b-20"></h6>
+                                <h2 class="text-right"><i class="fa fa-bolt f-left"></i><span></span></h2>
+                                <p class="m-b-0"><span class="f-right">Instant Payment</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-xl-3">
+                        <div class="card bg-c-yellow order-card">
+                            <div class="card-block">
+                                <h6 class="m-b-20"></h6>
+                                <h2 class="text-right"><i class="fa fa-thumbs-up f-left"></i><span></span></h2>
+                                <p class="m-b-0"><span class="f-right">100% Genuine Customers</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-xl-3">
+                        <div class="card bg-c-pink order-card">
+                            <div class="card-block">
+                                <h6 class="m-b-20"></h6>
+                                <h2 class="text-right"><i class="fa fa-exchange f-left"></i><span></span></h2>
+                                <p class="m-b-0"><span class="f-right">Free RC Transfer</span></p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+
+
+
+            <div class="best-features">
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-heading text-center mt-5 pt-5">
+
+                                <h2><b>Popular Brands</h2></b>
+
+                            </div>
+                        </div>
+                        <div class="col  text-center  ml-5 pl-4">
+                            <div class="row d-flex justify-content-center">
+                                <div class="brand-carousel section-padding owl-carousel">
+                                    <div class="single-logo w-50"><img alt="" src="assets\img\logo1.png"></div>
+                                    <div class="single-logo w-50"><img alt="" src="assets\img\logo2.png"></div>
+                                    <div class="single-logo w-50"><img alt="" src="assets\img\logo3.png"></div>
+                                    <div class="single-logo w-50"><img alt="" src="assets\img\logo4.png"></div>
+                                    <div class="single-logo w-50"><img alt="" src="assets\img\logo5.png"></div>
+                                    <div class="single-logo w-50"><img alt="" src="assets\img\logo8.png"></div>
+                                    <div class="single-logo w-50"><img alt="" src="assets\img\logo7.png"></div>
+                                    <div class="single-logo w-50"><img alt="" src="assets\img\logo9.png"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="happy-clients">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="section-heading text-center mt-5 pt-5">
+
+                                <h2><b>Happy Clients</h2></b>
+
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="owl-clients owl-carousel text-center">
+                                <div class="service-item">
+                                    <div class="icon ">
+                                        <img src="{{ asset('assets/img/testimonials/now-her-dream-comes-true-car.jpg') }}"
+                                            class="testimonial-image service-item-img">
+                                    </div>
+                                    <div class="down-content">
+                                        <h4>Mohan Tyagi - Hundai Creta</h4>
+                                        <p class="n-m"><em>"
+                                                "Dream Cars has the coolest website, choose a car - pay a small deposit -
+                                                and car is delivered at home! return it in 7 days if there is some problem.
+                                                Dream Cars is going places because of free RC transfer."</em></p>
+                                    </div>
+                                </div>
+
+                                <div class="service-item">
+                                    <div class="icon">
+                                        <img src="{{ asset('assets/img/testimonials/shutterstock_121369252.jpg') }}"
+                                            alt="" class="testimonial-image">
+                                    </div>
+                                    <div class="down-content">
+                                        <h4>Jane Smith - Mahindra Thar</h4>
+                                        <p class="n-m"><em>"The entire car buying experience with Dream Cars was
+                                                mindblowing! Loved the 360 view on website through which I could see the
+                                                features, interiors, even small scratches and dents - just like in real.
+                                                "</em></p>
+                                    </div>
+                                </div>
+
+                                <div class="service-item">
+                                    <div class="icon">
+                                        <img src="{{ asset('assets/img/testimonials/Used-Cars-For-Sale-Durham-NC-Couple-with-Kays.jpg') }}"
+                                            alt="" class="testimonial-image">
+                                    </div>
+                                    <div class="down-content">
+                                        <h4>Antony Davis - Maruthi Brezza</h4>
+                                        <p class="n-m"><em>"The entire car buying experience with Dream Cars was
+                                                mindblowing! Loved the 360 view on website through which I could see the
+                                                features, interiors, even small scratches and dents - just like in
+                                                real."</em></p>
+                                    </div>
+                                </div>
+
+                                <div class="service-item">
+                                    <div class="icon">
+                                        <img src="{{ asset('assets/img/testimonials/shutterstock_121369252.jpg') }}"
+                                            alt="" class="testimonial-image">
+                                    </div>
+                                    <div class="down-content">
+                                        <h4>Ajay - Jeep Compass</h4>
+                                        <p class="n-m"><em>"The entire car buying experience with Dream Cars was
+                                                mindblowing! Loved the 360 view on website through which I could see the
+                                                features, interiors, even small scratches and dents - just like in
+                                                real."</em></p>
+                                    </div>
+                                </div>
+
+                                <div class="service-item">
+                                    <div class="icon">
+                                        <img src="{{ asset('assets/img/testimonials/now-her-dream-comes-true-car.jpg') }}"
+                                            alt="" class="testimonial-image">
+                                    </div>
+                                    <div class="down-content">
+                                        <h4>Akarsh - Mahindra XVU500</h4>
+                                        <p class="n-m"><em>"The entire car buying experience with Dream Cars was
+                                                mindblowing! Loved the 360 view on website through which I could see the
+                                                features, interiors, even small scratches and dents - just like in
+                                                real."</em></p>
+                                    </div>
+                                </div>
+
+                                <div class="service-item">
+                                    <div class="icon">
+                                        <img src="{{ asset('assets/img/testimonials/shutterstock_121369252.jpg') }}"
+                                            alt="" class="testimonial-image">
+                                    </div>
+                                    <div class="down-content">
+                                        <h4>Antony - VolksWagon Polo</h4>
+                                        <p class="n-m"><em>"The entire car buying experience with Dream Cars was
+                                                mindblowing! Loved the 360 view on website through which I could see the
+                                                features, interiors, even small scratches and dents - just like in
+                                                real."</em></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </div>
 
+</div>
 
-    <div class="happy-clients">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-">
-            <div class="section-heading">
-              <h2>Happy Clients</h2>
-
-              <a href=""> <i class=""></i></a>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <div class="owl-clients owl-carousel text-center">
-              <div class="service-item">
-                <div class="icon">
-                  <i class="fa fa-user"></i>
-                </div>
-                <div class="down-content">
-                  <h4>John Doe</h4>
-                  <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."</em></p>
-                </div>
-              </div>
-              
-              <div class="service-item">
-                <div class="icon">
-                  <i class="fa fa-user"></i>
-                </div>
-                <div class="down-content">
-                  <h4>Jane Smith</h4>
-                  <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."</em></p>
-                </div>
-              </div>
-              
-              <div class="service-item">
-                <div class="icon">
-                  <i class="fa fa-user"></i>
-                </div>
-                <div class="down-content">
-                  <h4>Antony Davis</h4>
-                  <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."</em></p>
-                </div>
-              </div>
-              
-              <div class="service-item">
-                <div class="icon">
-                  <i class="fa fa-user"></i>
-                </div>
-                <div class="down-content">
-                  <h4>John Doe</h4>
-                  <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."</em></p>
-                </div>
-              </div>
-              
-              <div class="service-item">
-                <div class="icon">
-                  <i class="fa fa-user"></i>
-                </div>
-                <div class="down-content">
-                  <h4>Jane Smith</h4>
-                  <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."</em></p>
-                </div>
-              </div>
-              
-              <div class="service-item">
-                <div class="icon">
-                  <i class="fa fa-user"></i>
-                </div>
-                <div class="down-content">
-                  <h4>Antony Davis</h4>
-                  <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."</em></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>      
-
-
-    </div>
-@endsection
+    @endsection

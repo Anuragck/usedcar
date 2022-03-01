@@ -3,7 +3,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="section-heading">
-                            <h2 class="text-center">Featured Cars here</h2>
+                            <h2 class="text-center"><b>Featured Cars</b></h2>
                             <a href="\allCarsPage">view more <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
@@ -51,8 +51,8 @@
                                     </small>
                       <a
                         :href="'/singleCarView/' + car.id"
-                        class="btn btn-primary pull-right mt-4"
-                        >View More</a
+                        class="btn  filled-button rounded pull-right mt-4"
+                        >View More <i class="fa fa-arrow-right fa-fw" aria-hidden="true"></i></a
                       >
                     </div>
                   </div>

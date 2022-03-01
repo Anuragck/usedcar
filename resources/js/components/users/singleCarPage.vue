@@ -101,52 +101,125 @@
 
             <div class="text-center">
               <button
-                class="btn btn-primary"
+                class="btn btn-danger rounded pull-right mt-4"
                 data-toggle="modal"
                 data-target="#enquireNow"
               >
-                Enquire Now
+                Enquire Now <i class="fas fa-headset fa-fw"></i>
               </button>
             </div>
           </div>
         </div>
 
-<div class="col-md-6">
+        <div class="col-md-6">
+          <!-- PRICE ITEM -->
+          <div class="table-responsive">
+            <table class="table m-0">
+              <tbody>
+                <tr>
+                  <th scope="row"></th>
+                  <td class="font-weight-bold">Color</td>
+                  <td></td>
+                  <td>{{ single_car.color }}</td>
+                </tr>
 
-	<!-- PRICE ITEM -->
-<div class="table-responsive">
-                            <table class="table m-0">
-                                <thead>
-                                    <tr>
-                                        <th scope="col"></th>
-                                        <th scope="col">First</th>
-                                        <th scope="col"></th>
-                                        <th scope="col">Handle</th>
-                                        <th scope="col"></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row"></th>
-                                        <td>Mark</td>
-                                        <td></td>
-                                        <td>@mdo</td>
+                <tr>
+                  <th scope="row"></th>
+                  <td class="font-weight-bold">Year Of Reg</td>
+                  <td></td>
+                  <td>{{ single_car.year_of_reg }}</td>
+                </tr>
 
-                                    </tr>
+                <tr>
+                  <th scope="row"></th>
+                  <td class="font-weight-bold">Fuel</td>
+                  <td></td>
+                  <td>{{ single_car.fuel }}</td>
+                </tr>
+
+                <tr>
+                  <th scope="row"></th>
+                  <td class="font-weight-bold">Kms Driven</td>
+                  <td></td>
+                  <td>{{ single_car.kms_driven }}{{ "Kms" }}</td>
+                </tr>
+
+                <tr>
+                  <th scope="row"></th>
+                  <td class="font-weight-bold">No Of Owners</td>
+                  <td></td>
+                  <td>{{ single_car.no_of_owners }}</td>
+                </tr>
+
+                <tr>
+                  <th scope="row"></th>
+                  <td class="font-weight-bold">Displacement</td>
+                  <td></td>
+                  <td>{{ single_car.cc }}</td>
+                </tr>
+
+                <tr>
+                  <th scope="row"></th>
+                  <td class="font-weight-bold">RTO</td>
+                  <td></td>
+                  <td>{{ single_car.rto }}</td>
+                </tr>
+
+                <tr>
+                  <th scope="row"></th>
+                  <td class="font-weight-bold">Transmission Type</td>
+                  <td></td>
+                  <td>{{ single_car.transmission_type }}</td>
+                </tr>
+
+                <tr>
+                  <th scope="row"></th>
+                  <td class="font-weight-bold">Gear Box</td>
+                  <td></td>
+                  <td>{{ single_car.gear_box }}</td>
+                </tr>
+
+                <tr>
+                  <th scope="row"></th>
+                  <td class="font-weight-bold">Mileage Per Km</td>
+                  <td></td>
+                  <td>{{ single_car.milage_per_km }}</td>
+                </tr>
 
 
-                                </tbody>
-                            </table>
 
-                        </div>
+                <tr>
+                  <th scope="row"></th>
+                  <td class="font-weight-bold">Drive Type</td>
+                  <td></td>
+                  <td>{{ single_car.drive_type }}</td>
+                </tr>
 
-					<!-- /PRICE ITEM -->
+  <tr>
+                  <th scope="row"></th>
+                  <td class="font-weight-bold">Front Brake</td>
+                  <td></td>
+                  <td>{{ single_car.front_brake }}</td>
+                </tr>
 
-</div>
+ <tr>
+                  <th scope="row"></th>
+                  <td class="font-weight-bold">Back Brake</td>
+                  <td></td>
+                  <td>{{ single_car.back_brake }}</td>
+                </tr>
+
+
+              </tbody>
+            </table>
+          </div>
+
+          <!-- /PRICE ITEM -->
+        </div>
       </div>
     </div>
 
-    <div class="section">
+    <div class="section mt-5 pt-5">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -161,17 +234,55 @@
             </div>
           </div>
 
-          <div class="col-md-6">
+          <div class="col-md-6 pl-5">
             <div class="section-heading">
               <h2>Vehicle Extras</h2>
             </div>
 
-            <div class="left-content">
-              <p>
-                - ABS <br />-Leather seats <br />-Power Assisted Steering
-                <br />-Air Conditioner <br />-Wheel Covers <br />-Power Windows
-                Front <br />-Anti Lock Braking System
-              </p>
+            <div class="row">
+<div class="text-center col-md-4 col-lg-4 mt-3" v-if="single_car.power_steering == 1">
+ <img src="https://img.icons8.com/dotty/80/000000/steering-wheel.png" width="50px" >
+<h6>Power Steering</h6>
+</div>
+
+<div class="text-center col-md-4 col-lg-4 mt-3" v-if="single_car.abs == 1">
+<img src="https://img.icons8.com/ios/50/000000/abs.png" width="50px">
+<h6>ABS</h6>
+</div>
+
+<div class="text-center col-md-4 col-lg-4 mt-3" v-if="single_car.driver_air_bag == 1">
+<img src="https://img.icons8.com/ios/50/000000/airbag-on.png" width="50px" >
+<h6>Diver Air Bag</h6>
+</div>
+
+<div class="text-center col-md-4 col-lg-4 mt-3"  v-if="single_car.passenger_air_bag == 1">
+<img src="https://img.icons8.com/ios-filled/50/000000/airbag-on.png" width="50px">
+<h6>Passenger Air Bag</h6>
+</div>
+
+<div class="text-center col-md-4 col-lg-4 mt-3"  v-if="single_car.auto_climate_control == 1">
+<img src="https://img.icons8.com/ios/50/000000/climate-change.png" width="50px" >
+<h6>Auto Climate Control</h6>
+</div>
+
+<div class="text-center col-md-4 col-lg-4 mt-3"  v-if="single_car.alloy_wheel == 1">
+<img src="https://img.icons8.com/ios/50/000000/wheel.png" width="50px" >
+<h6>Alloy Wheel</h6>
+</div>
+
+
+
+<div class="text-center col-md-4 col-lg-4 mt-3" v-if="single_car.ac == 1">
+<img src="https://img.icons8.com/ios/50/000000/air-conditioner.png" width="50px">
+<h6>A C</h6>
+</div>
+
+
+
+
+
+
+
             </div>
           </div>
         </div>
@@ -219,5 +330,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

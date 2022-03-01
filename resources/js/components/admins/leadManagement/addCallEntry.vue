@@ -17,10 +17,16 @@
         <div class="row">
           <div class="col">
             <div class="form-group">
-              <label for="" class="font-weight-bold text-muted"
+              <label for="" class="font-weight-bold text-muted required"
                 >Select Date</label
               >
               <input type="date" class="form-control" required="" v-model="callEntry.callDate"/>
+<small
+                                    class="text-danger"
+                                    v-if="errors.callDate"
+                                >
+                                    {{ errors.callDate[0] }}</small
+                                >
             </div>
           </div>
         </div>
@@ -28,7 +34,7 @@
         <div class="row">
           <div class="col-lg-4">
             <div class="form-group">
-              <label for="" class="font-weight-bold text-muted"
+              <label for="" class="font-weight-bold text-muted required"
                 >Select Time
               </label>
               <select class="form-control" required="" v-model="callEntry.timeHour">
@@ -46,6 +52,12 @@
                 <option>11</option>
                 <option>12</option>
               </select>
+<small
+                                    class="text-danger"
+                                    v-if="errors.timeHour || errors.timeMin || errors.timeAmPm"
+                                >
+                                    {{ 'Please select time' }}</small
+                                >
             </div>
           </div>
           <div class="col-lg-4">
@@ -66,6 +78,7 @@
                 <option>50</option>
                 <option>55</option>
               </select>
+
             </div>
           </div>
 
@@ -85,7 +98,7 @@
         <div class="row">
           <div class="col">
             <div class="form-group">
-              <label for="" class="font-weight-bold text-muted"
+              <label for="" class="font-weight-bold text-muted required"
                 >Call Status
               </label>
               <select class="form-control" required="" v-model="callEntry.callStatus">
@@ -96,11 +109,17 @@
                 <option value="Out of Coverage">Out of Coverage</option>
                 <option value="Rejected">Rejected</option>
               </select>
+<small
+                                    class="text-danger"
+                                    v-if="errors.callStatus"
+                                >
+                                    {{ errors.callStatus[0] }}</small
+                                >
             </div>
           </div>
           <div class="col" v-if="callEntry.callStatus == 'Connected'">
             <div class="form-group">
-              <label for="" class="font-weight-bold text-muted"
+              <label for="" class="font-weight-bold text-muted required"
                 >Select Priority
               </label>
               <select class="form-control" required="" v-model="callEntry.leadPriority">
@@ -109,6 +128,13 @@
                 <option value="Medium">Medium</option>
                 <option value="Low">Low</option>
               </select>
+<small
+                                    class="text-danger"
+                                    v-if="errors.leadPriority"
+                                >
+                                    {{ errors.leadPriority[0] }}</small
+                                >
+
             </div>
           </div>
         </div>
@@ -170,6 +196,7 @@ this.enquirer_name=enquiry.name;
   methods: {
     goBack() {
       bus.$emit("back-to-table");
+this.clearFormField();
     },
 
    addCallEntry() {

@@ -209,6 +209,13 @@ export default {
     },
 
     addExpenseSection(purchase) {
+if(purchase.images.length == 0){
+Swal.fire({
+  icon: 'warning',
+  text: 'Please Upload Documents/Images First!',
+})
+return false;
+}
       this.title = "Add Expense";
       this.expense_history_section = false;
       this.vehicle_list_table = false;
@@ -221,6 +228,13 @@ export default {
     },
 
     readyTosellSection(purchase) {
+if(purchase.images.length == 0){
+Swal.fire({
+  icon: 'warning',
+  text: 'Please Upload Documents/Images First!',
+})
+return false;
+}
       this.title = "Ready To Sell";
       this.expense_history_section = false;
       this.vehicle_list_table = false;

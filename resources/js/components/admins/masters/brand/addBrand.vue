@@ -14,7 +14,7 @@
       </button>
     </div>
     <div class="modal-body">
-      <div class="form-group form-floating-label">
+      <div class="form-group form-floating-label ">
         <input
           id="inputFloatingLabel"
           type="text"
@@ -22,12 +22,18 @@
           required=""
           v-model="brand.brand_name"
         />
-        <label for="inputFloatingLabel" class="placeholder"
+        <label for="inputFloatingLabel" class="placeholder required"
           >Enter Brand Name</label
         >
+<small
+                                    class="text-danger"
+                                    v-if="errors.brand_name"
+                                >
+                                    {{ errors.brand_name[0] }}</small
+                                >
       </div>
       <div class="form-group">
-        <label for="exampleFormControlFile1">Add Brand Logo</label>
+        <label for="exampleFormControlFile1 required">Add Brand Logo</label>
         <div class="card img_card mx-5">
           <img
             :src="url"

@@ -15,7 +15,23 @@ class PurchaseController extends Controller
         $request->validate([
 
             "brand_id"  => 'required',
-            'reg_no' => "required|unique:purchases,reg_no,$request->id"
+'model_id'=>'required',
+            'reg_no' => "required|unique:purchases,reg_no,$request->id",
+            'color'=>'required',
+            'year_of_reg'=>'required',
+            'fuel_type'=>'required',
+            'kms_driven'=>'required',
+            'cc'=>'required',
+
+            'purchased_price'=>'required',
+
+            'seller_name'=>'required',
+            'seller_ph'=>'required',
+
+
+
+
+
 
 
         ]);

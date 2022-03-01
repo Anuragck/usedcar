@@ -17,7 +17,7 @@
       <!-- saleitem search component-->
       <div class="form-group mb-1">
         <div>
-          <label>Select Vehicle Brand</label>
+          <label class="required">Select Vehicle Brand</label>
           <multiselect
             v-model="selectedBrand"
             label="name"
@@ -29,6 +29,12 @@
             :disabled="this.edit"
           >
           </multiselect>
+<small
+                                    class="text-danger"
+                                    v-if="errors.brand_id"
+                                >
+                                    {{ 'Please select brand name' }}</small
+                                >
         </div>
       </div>
 
@@ -43,9 +49,15 @@
           name="model_name"
           v-model="modelData.model_name"
         />
-        <label for="inputFloatingLabel" class="placeholder"
+        <label for="inputFloatingLabel" class="placeholder required"
           >Enter Model Name</label
         >
+<small
+                                    class="text-danger"
+                                    v-if="errors.model_name"
+                                >
+                                    {{ errors.model_name[0] }}</small
+                                >
       </div>
     </div>
 
