@@ -255,6 +255,7 @@ Vue.component(
     "pre-loader",
     require("./components/admins/loading.vue").default
 );
+Vue.component("change-password", require("./components/admins/changePassword.vue").default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

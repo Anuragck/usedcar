@@ -1,5 +1,20 @@
 @extends('layouts.main')
-
+ <!--
+  Start Preloader
+  ==================================== -->
+  <div id="preloader">
+    <div class='preloader'>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <!--
+  End Preloader
+  ==================================== -->
 @section('content')
     <!-- Page Content -->
     <div class="page-heading about-heading header-text" style="background-image: url(assets/img/heading-6-1920x500.jpg);">

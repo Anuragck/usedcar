@@ -72,8 +72,11 @@
                             <li>
 
 
-                                <a class="dropdown-item" href="#"><i class="fas fa-cog fa-fw mr-2 text-gray-400"></i>
-                                    Change Password</a>
+                                <a class="dropdown-item" href="#passwordChangeModal" data-toggle="modal"
+                                data-target="#passwordChangeModal">
+                                <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Change Password
+                            </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                               document.getElementById('logout-form').submit();">
@@ -98,7 +101,7 @@
 
     <div class="main-panel">
         <div class="content">
-
+            <change-password></change-password>
             @yield('main-content')
 
 

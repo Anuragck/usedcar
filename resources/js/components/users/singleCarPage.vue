@@ -116,70 +116,70 @@
           <div class="table-responsive">
             <table class="table m-0">
               <tbody>
-                <tr>
+                <tr v-if="single_car.color">
                   <th scope="row"></th>
                   <td class="font-weight-bold">Color</td>
                   <td></td>
                   <td>{{ single_car.color }}</td>
                 </tr>
 
-                <tr>
+                <tr v-if="single_car.year_of_reg">
                   <th scope="row"></th>
                   <td class="font-weight-bold">Year Of Reg</td>
                   <td></td>
                   <td>{{ single_car.year_of_reg }}</td>
                 </tr>
 
-                <tr>
+                <tr v-if="single_car.fuel">
                   <th scope="row"></th>
                   <td class="font-weight-bold">Fuel</td>
                   <td></td>
                   <td>{{ single_car.fuel }}</td>
                 </tr>
 
-                <tr>
+                <tr v-if="single_car.kms_driven">
                   <th scope="row"></th>
                   <td class="font-weight-bold">Kms Driven</td>
                   <td></td>
                   <td>{{ single_car.kms_driven }}{{ "Kms" }}</td>
                 </tr>
 
-                <tr>
+                <tr v-if="single_car.no_of_owners">
                   <th scope="row"></th>
                   <td class="font-weight-bold">No Of Owners</td>
                   <td></td>
                   <td>{{ single_car.no_of_owners }}</td>
                 </tr>
 
-                <tr>
+                <tr v-if="single_car.cc">
                   <th scope="row"></th>
                   <td class="font-weight-bold">Displacement</td>
                   <td></td>
                   <td>{{ single_car.cc }}</td>
                 </tr>
 
-                <tr>
+                <tr v-if="single_car.rto">
                   <th scope="row"></th>
                   <td class="font-weight-bold">RTO</td>
                   <td></td>
                   <td>{{ single_car.rto }}</td>
                 </tr>
 
-                <tr>
+                <tr v-if="single_car.transmission_type">
                   <th scope="row"></th>
                   <td class="font-weight-bold">Transmission Type</td>
                   <td></td>
                   <td>{{ single_car.transmission_type }}</td>
                 </tr>
 
-                <tr>
+                <tr v-if="single_car.gear_box">
                   <th scope="row"></th>
                   <td class="font-weight-bold">Gear Box</td>
                   <td></td>
                   <td>{{ single_car.gear_box }}</td>
                 </tr>
 
-                <tr>
+                <tr v-if="single_car.milage_per_km">
                   <th scope="row"></th>
                   <td class="font-weight-bold">Mileage Per Km</td>
                   <td></td>
@@ -188,21 +188,21 @@
 
 
 
-                <tr>
+                <tr v-if="single_car.drive_type">
                   <th scope="row"></th>
                   <td class="font-weight-bold">Drive Type</td>
                   <td></td>
                   <td>{{ single_car.drive_type }}</td>
                 </tr>
 
-  <tr>
+  <tr v-if="single_car.front_brake">
                   <th scope="row"></th>
                   <td class="font-weight-bold">Front Brake</td>
                   <td></td>
                   <td>{{ single_car.front_brake }}</td>
                 </tr>
 
- <tr>
+ <tr v-if="single_car.back_brake">
                   <th scope="row"></th>
                   <td class="font-weight-bold">Back Brake</td>
                   <td></td>

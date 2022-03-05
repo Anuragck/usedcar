@@ -86,7 +86,7 @@
                 <th>Model </th>
                 <th>Reg No</th>
                 <th>Purchased Price</th>
- <th>Status</th>
+ <!-- <th>Status</th> -->
                 <th>Actions</th>
               </tr>
             </thead>
@@ -98,7 +98,7 @@
                 <th>Model </th>
                 <th>Reg No</th>
                 <th>Purchased Price</th>
-<th>Status</th>
+<!-- <th>Status</th> -->
                 <th>Actions</th>
               </tr>
             </tfoot>
@@ -109,7 +109,7 @@
                 <td>{{ purchase.models.name }}</td>
                 <td>{{ purchase.reg_no }}</td>
                 <td>{{ purchase.purchase_price }}</td>
-<td>{{ 'Status' }}</td>
+                <!-- <td>{{ 'Status' }}</td> -->
                 <td><button class="btn btn-primary btn-sm" @click="singleVehicleReport(purchase)"><i class="fas fa-eye fa-fw" title="view details"></i></button></td>
               </tr>
             </tbody>

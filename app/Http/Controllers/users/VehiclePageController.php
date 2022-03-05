@@ -13,7 +13,7 @@ class VehiclePageController extends Controller
     public function singleVehicle($id)
     {
 
-     $single_car=Purchase::with('brands', 'models', 'sales','images','indexPageImages')->where('id', '=', $id)->first();
+     $single_car=Purchase::with('brands', 'models', 'sales','newImages','indexPageImages')->where('id', '=', $id)->first();
 
 
          return view('users.singleCarPage',compact('single_car'));
@@ -24,7 +24,7 @@ class VehiclePageController extends Controller
     public function allCars(Request $request){
 
 
-        $all_cars=Purchase::with('brands', 'models', 'sales','images','indexPageImages')->where('add_to_website', '=', 1)->where('vehicle_status', '=', 1);
+        $all_cars=Purchase::with('brands', 'models', 'sales','newImages','indexPageImages')->where('add_to_website', '=', 1)->where('vehicle_status', '=', 1);
 
         if ($request->brand) {
 

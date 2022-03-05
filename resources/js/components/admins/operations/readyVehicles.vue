@@ -74,6 +74,7 @@
                   <button
                     class="btn btn-warning btn-xs"
                     @click="removeFromWeb(data)"
+                    :disabled="data.add_to_website == null"
                   >
                     <i
                       class="fas fa-minus-circle fa-lg"
@@ -83,6 +84,7 @@
                   <button
                     class="btn btn-secondary btn-xs"
                     @click="addToHome(data)"
+                    :disabled="data.add_to_website == 2 || data.add_to_website == null"
                   >
                     <i
                       class="far fa-star fa-lg"
@@ -132,6 +134,20 @@ export default {
     },
 
     addToWebsite(data) {
+ if (data.new_images.length == 0) {
+        Swal.fire({
+          text: "Please Upload New Images First!",
+          icon: "warning",
+          confirmButtonColor: "#3085d6",
+          confirmButtonText: "Ok",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location = "dashboard#/images";
+          }
+        });
+        return false;
+      }
+
       if (data.add_to_website == 1) {
         Toast.fire({
           icon: "warning",

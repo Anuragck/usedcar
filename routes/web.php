@@ -18,6 +18,7 @@ use App\Http\Controllers\admins\ReadyVehiclesController;
 use App\Http\Controllers\admins\SaleController;
 use App\Http\Controllers\admins\VehicleListController;
 use App\Http\Controllers\admins\DashboardController;
+use App\Http\Controllers\PasswordChangeController;
 use App\Http\Controllers\users\IndexPageController;
 use App\Http\Controllers\users\VehiclePageController;
 use Illuminate\Support\Facades\Auth;
@@ -164,6 +165,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['isAdmin', 'auth', 'preventB
 
     //dashboard-data
     Route::get('/dashboard-data', [DashboardController::class, 'getDashboardData']);
+ //Change password
+ Route::post('updatePassword', [PasswordChangeController::class, 'changePassword']);
 });
 
 

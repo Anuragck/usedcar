@@ -57,9 +57,9 @@
           <h4 class="card-title font-weight-bold">
             {{ "Vehicle List  (Work Pending Vehicles)" }}
           </h4>
-          <button class="btn btn-danger btn-round py-1 ml-auto">
+          <!--<button class="btn btn-danger btn-round py-1 ml-auto">
             Delete <i class="far fa-trash-alt"></i>
-          </button>
+          </button>-->
         </div>
       </div>
       <div class="card-body">
@@ -71,7 +71,7 @@
           >
             <thead>
               <tr>
-                <th></th>
+                <!-- <th></th>-->
                 <th>Sl.No</th>
                 <th>Brand Name</th>
                 <th>Model Name</th>
@@ -85,7 +85,7 @@
             </thead>
             <tfoot>
               <tr>
-                <th></th>
+                <!-- <th></th>-->
                 <th>Sl.No</th>
                 <th>Brand Name</th>
                 <th>Model Name</th>
@@ -98,14 +98,14 @@
             </tfoot>
             <tbody>
               <tr v-for="(purchase, index) in purchaseData" :key="purchase.id">
-                <td class="text-center">
+                <!-- <td class="text-center">
                   <input
                     class="form-control-input"
                     type="checkbox"
                     id="inlineCheckbox1"
                     value="option1"
                   />
-                </td>
+                </td>-->
                 <td>{{ index + 1 }}</td>
                 <td>{{ purchase.brands.name }}</td>
                 <td>{{ purchase.models.name }}</td>
@@ -117,7 +117,7 @@
                 </td>
                 <!-- <td>{{ purchase.sale_status }}</td> -->
 
-                <td>
+                <td style="white-space: nowrap">
                   <button
                     class="btn btn-secondary btn-xs"
                     @click="showExpenseHistory(purchase)"
@@ -209,13 +209,19 @@ export default {
     },
 
     addExpenseSection(purchase) {
-if(purchase.images.length == 0){
-Swal.fire({
-  icon: 'warning',
-  text: 'Please Upload Documents/Images First!',
-})
-return false;
-}
+      if (purchase.images.length == 0) {
+        Swal.fire({
+          text: "Please Upload Documents/Images First!",
+          icon: "warning",
+          confirmButtonColor: "#3085d6",
+          confirmButtonText: "Ok",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location = "dashboard#/images";
+          }
+        });
+        return false;
+      }
       this.title = "Add Expense";
       this.expense_history_section = false;
       this.vehicle_list_table = false;
@@ -228,13 +234,26 @@ return false;
     },
 
     readyTosellSection(purchase) {
-if(purchase.images.length == 0){
-Swal.fire({
-  icon: 'warning',
-  text: 'Please Upload Documents/Images First!',
-})
-return false;
-}
+      if (purchase.images.length == 0) {
+        // Swal.fire({
+        //   icon: "warning",
+        //   text: "Please Upload Documents/Images First!",
+        // });
+        Swal.fire({
+          // title: "Are you sure?",
+          text: "Please Upload Documents/Images First!",
+          icon: "warning",
+          // showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          // cancelButtonColor: "#d33",
+          confirmButtonText: "Ok",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location = "dashboard#/images";
+          }
+        });
+        return false;
+      }
       this.title = "Ready To Sell";
       this.expense_history_section = false;
       this.vehicle_list_table = false;

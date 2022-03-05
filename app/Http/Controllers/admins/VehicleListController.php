@@ -37,7 +37,7 @@ public function sellReady(Request $request){
 
 
 public function readyVehicles(){
-    $vehiclelist =Purchase::with('brands','models')->where([['vehicle_status','=',1],['sale_status','!=',2]])->orderBy('id','DESC')->get();
+    $vehiclelist =Purchase::with('brands','models','newImages')->where([['vehicle_status','=',1],['sale_status','!=',2]])->orderBy('id','DESC')->get();
     return $vehiclelist;
 }
 }

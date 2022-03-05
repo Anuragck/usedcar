@@ -46,7 +46,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-4 col-sm-6 col-12"  v-if="total_price != null" >
+        <div class="col-xl-4 col-sm-6 col-12" v-if="total_price != null">
           <div class="card">
             <div class="card-content">
               <div class="card-body">
@@ -69,7 +69,7 @@
     <div class="row">
       <div class="col">
         <div class="form-group">
-          <label for="" class="font-weight-bold text-muted"
+          <label for="" class="font-weight-bold text-muted required"
             >Enter Selling Price</label
           >
           <input
@@ -85,7 +85,7 @@
     <div class="row">
       <div class="col">
         <div class="form-group">
-          <label for="comment" class="font-weight-bold text-muted"
+          <label for="comment" class="font-weight-bold text-muted required"
             >Small Description About Vehicle</label
           >
           <textarea
@@ -94,7 +94,12 @@
             v-model="vehicleData.description"
           >
           </textarea>
+<small class="text-danger" v-if="errors.description">
+          {{ errors.description[0] }}</small
+        >
         </div>
+
+
       </div>
     </div>
 
@@ -129,7 +134,7 @@ export default {
         description: "",
       },
 
-errors:{},
+      errors: {},
     };
   },
 
@@ -159,8 +164,8 @@ errors:{},
                   icon: "success",
                   title: "Vehicle is Added for Sale",
                 });
-this.clearFormData();
- bus.$emit("vehicle-is-reday");
+                this.clearFormData();
+                bus.$emit("vehicle-is-reday");
               }
             });
           }
@@ -172,23 +177,25 @@ this.clearFormData();
               icon: "success",
               title: "Vehicle is Added for Sale",
             });
-this.clearFormData();
-  bus.$emit("vehicle-is-reday");
+            this.clearFormData();
+            bus.$emit("vehicle-is-reday");
           }
+        }) .catch((error) => {
+          this.errors = error.response.data.errors;
+          console.log("errors");
         });
       }
     },
 
-
-clearFormData(){
- for (let data in this.vehicleData) {
+    clearFormData() {
+      for (let data in this.vehicleData) {
         this.vehicleData[data] = "";
       }
 
       for (let er in this.errors) {
         this.errors[er] = "";
       }
-}
+    },
   },
 
   created() {

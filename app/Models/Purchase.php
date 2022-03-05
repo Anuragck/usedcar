@@ -20,6 +20,11 @@ class Purchase extends Model
     public function images(){
         return $this->hasMany(VehicleImage::class,'vehicle_id','id');
     }
+
+    public function newImages(){
+        return $this->hasMany(VehicleImage::class,'vehicle_id','id')->where('new_or_old','=',2);
+    }
+
     public function customer() {
         return $this->belongsTo(Enquiry::class,'reg_no','enq_vehicle_reg_no')->withTrashed();
     }
@@ -28,7 +33,8 @@ class Purchase extends Model
     }
 
     public function indexPageImages(){
-        return $this->hasMany(VehicleImage::class,'vehicle_id','id')->where('type','=',1);
+        return $this->hasMany(VehicleImage::class,'vehicle_id','id')->where('type','=',1)->where('new_or_old','=',2);
+
     }
 
     public function expenses(){
