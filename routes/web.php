@@ -64,7 +64,13 @@ Route::get('/user-get-brands', [BrandController::class, 'getBrands']);
 
 //ADMIN-ROUTE-GROUP
 Route::middleware(['middleware' => 'preventBackHistory'])->group(function () {
-    Auth::routes();
+    Auth::routes([
+        'login'=>true,
+        'logout'=>true,
+        'register' => false, // Registration Routes...
+        'reset' => false, // Password Reset Routes...
+        'verify' => false, // Email Verification Routes...
+      ]);
 });
 
 Route::get('/logout', [LoginController::class, 'logout']);
